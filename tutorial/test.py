@@ -1,5 +1,5 @@
 a = 'bkabka'
-b = 4
+b = 3
 d = 7
 e = 5
 f = True
@@ -28,6 +28,4 @@ bool -> boolean: verdadeiro(1) ou falso(0)
 Operandos
 + - * /: operadores matematicos
 ==, >, >=, <, <=, !(not), !=, and, or: operadores logicos, comparam dois valores e retorna um bool.
-
-
 '''
