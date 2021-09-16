@@ -4,6 +4,7 @@ d = 7
 e = 5
 f = True
 
+#olha ai jaxe
 #exemplo de operacao nao suportada.
 #c = a + b
 
