@@ -30,3 +30,5 @@ Operandos
 + - * /: operadores matematicos
 ==, >, >=, <, <=, !(not), !=, and, or: operadores logicos, comparam dois valores e retorna um bool.
 '''
+
+#mudanca teste
