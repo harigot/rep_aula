@@ -1,0 +1,6 @@
+Conveção de nome de branches:
+-feat: Novas funcionalidades visiveis para o usuário. Ex: Uma nova página, mudança da cor da tela, etc.
+-chore: Mudanças que não afetam em nada o funcionamento do sistema. Ex: Adicionar comentário.
+-refactor: Mudanças que refazem alguma parte do sistema. Ex: Otimização, mudança de nome de variável, etc.
+-fix: Correção de bugs.
+
