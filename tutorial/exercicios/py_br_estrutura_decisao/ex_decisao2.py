@@ -1,6 +1,6 @@
 #exercicio 4: Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
 
-l = input('Digite uma letra do alfabeto: ')
+l = input('Digite uma letra do alfabeto: ').lower()
 
 vog = ['a', 'e', 'i', 'o', 'u']
 con = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'y', 'w', 'z']
@@ -8,8 +8,8 @@ con = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's'
 if l in vog:
     print('Vogal')
 elif l in con:
-    print('consoante')
+    print('Consoante')
 else:
-    print('erro')
+    print('Erro')
     
 
