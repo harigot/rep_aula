@@ -1,0 +1,2 @@
+1- Read the remainder points about linux shell (points 6 through 9)
+2- Read the git tutorial page
