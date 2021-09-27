@@ -17,11 +17,11 @@ while r == True:
         A = input('População de um país A: ')
     A = int(A)
 
-    taxa_a = input('taxa de crescimento da população de um país A em porcentagem: ')
+    taxa_a = input('Taxa de crescimento da população de um país A em porcentagem: ')
     taxa_a_aux = taxa_a.replace('.', '') #remove os pontos da str pra usar funcoes numericas.
     while not taxa_a_aux.isnumeric():
         print('Erro, a resposta deve ser um numero maior que zero.')
-        taxa_a = input('taxa de crescimento da população de um país A em porcentagem: ')
+        taxa_a = input('Taxa de crescimento da população de um país A em porcentagem: ')
         taxa_a_aux = taxa_a.replace('.', '')
     taxa_a = float(taxa_a)
 
@@ -31,11 +31,11 @@ while r == True:
         B = input('População de um país B: ')
     B = int(B)
 
-    taxa_b = input('taxa de crescimento da população de um país B em porcentagem: ')
+    taxa_b = input('Taxa de crescimento da população de um país B em porcentagem: ')
     taxa_b_aux = taxa_b.replace('.', '')
     while not taxa_b_aux.isnumeric():
         print('Erro, a resposta deve ser um numero maior que zero.')
-        taxa_b = input('taxa de crescimento da população de um país A em porcentagem: ')
+        taxa_b = input('Taxa de crescimento da população de um país A em porcentagem: ')
         taxa_b_aux = taxa_b.replace('.', '')
     taxa_b = float(taxa_b)
 
@@ -48,11 +48,11 @@ while r == True:
             print('Nessas condições a população de A nunca ultrapassará a população de b')
             break
         else:
-            print(anos, 'anos.')
+            print(anos, 'Anos.')
     else:
-        print(anos, 'anos.')
+        print(anos, 'Anos.')
     
-    r = input('Deseja repetir a operação? ')
+    r = input('Deseja repetir a operação? ') #add .lower()
     while r != 'y' and r != 'n': 
         print('Erro, resposta fora do padrão.')
         r = input('Deseja repetir a operação? ')
@@ -61,5 +61,5 @@ while r == True:
         r = True
     elif r == 'n':
         r = False
-        print('operação finalizada.')    
+        print('Operação finalizada.')    
 

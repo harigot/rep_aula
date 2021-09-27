@@ -9,7 +9,7 @@ p2 = 7
 pf = 7
 
 nota = (((p1 + p2) / 2) + pf) / 2
-print('media do aluno:', nota)
+print('Media do aluno:', nota)
 
 if nota >= 7:
     print('Aprovado')
@@ -18,5 +18,5 @@ elif nota >= 5 and nota < 7:
 elif nota < 5:
     print('Reprovado')
 else:
-    print('erro')
+    print('Erro')
     
