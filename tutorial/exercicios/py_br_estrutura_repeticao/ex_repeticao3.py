@@ -22,9 +22,9 @@ while sex != 'f' and sex != 'm':
     print('Erro, por favor siga as instruções abaixo.')
     sex = input('Seu genero biologico, digite (f) para feminino ou (m) para masculino: ')
 
-ec = input('Seu estado Civil, (s) para solteiro(a), (c) para casado(a), (v) para viuvo(a), (d) para dovprciado(a): ')
+ec = input('Seu estado civil, (s) para solteiro(a), (c) para casado(a), (v) para viuvo(a), (d) para divorciado(a): ')
 while ec != 's' and ec != 'c' and ec != 'v' and ec != 'd':
     print('Erro, por favor siga as instruções abaixo.')
-    ec = input('Seu estado Civil, (s) para solteiro(a), (c) para casado(a), (v) para viuvo(a), (d) para dovprciado(a): ')
+    ec = input('Seu estado civil, (s) para solteiro(a), (c) para casado(a), (v) para viuvo(a), (d) para divorciado(a): ')
 
 print('Sucesso')
