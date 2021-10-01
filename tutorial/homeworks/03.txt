@@ -1,0 +1,9 @@
+Recursions:
+
+1- Create a recursion function to calculate fibonacci sequence and print it on screen given its nth number.
+Example: 
+User inputs  6.
+Output: 0, 1, 1, 2, 3, 5
+
+User inputs 4
+Output: 0, 1, 1, 2
