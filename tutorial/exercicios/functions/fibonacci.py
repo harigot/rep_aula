@@ -27,13 +27,13 @@ def fibo_check():  # Name suggestion: fibo_input_validator
         # print('errado')
         return True
 
-
 num = 0
 
 while fibo_check():
     print('error, plese enter a non negative number')
 
-for i in range(num+1):
-    print(fibonacci(i))
+if not num == 0:
+    for i in range(num):
+        print(fibonacci(i))
 else:
     print(num)
