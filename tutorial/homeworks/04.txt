@@ -1,0 +1,4 @@
+Listas e funções
+
+1- Fazer 3 exercícios de Listas: https://wiki.python.org.br/ExerciciosListas
+2- Fazer 3 exercícios de funções: https://wiki.python.org.br/ExerciciosFuncoes
