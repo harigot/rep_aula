@@ -3,11 +3,10 @@
 #o custo de um item antes do imposto. A função “altera” o valor de custo para incluir o 
 #imposto sobre vendas.
 
-cost = float(input('Preco do produto: '))
+cost = float(input('Preço do produto: '))
 tax = float(input('Taxa de imposto: '))
-
 
 def somaimposto(tax, cost):
     return (1 + tax/100)*cost
 
-print('Valor com imposto:', somaimposto(tax,cost))
+print('Preço final:', somaimposto(tax,cost))
