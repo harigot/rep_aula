@@ -3,8 +3,8 @@
 
 print('Insira 3 numeros para serem somados.')
 a = int(input('Primeiro numero: '))
-b = int(input('segundo numero: '))
-c = int(input('terceiro numero: '))
+b = int(input('Segundo numero: '))
+c = int(input('Terceiro numero: '))
 
 def sum(a, b, c):
     result = a + b + c
