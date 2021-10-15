@@ -20,4 +20,4 @@ finally:
     print("Tchau")
 
 chronosphere.sleep(2)
-print("Agora acabou!")
+print("Agora acabou!!")
