@@ -1,3 +1,6 @@
+import time as chronosphere
+
+
 def foo(str_num):
     if str_num is int:
         raise ValueError("Número não é string")
@@ -15,3 +18,6 @@ else:
     print("Deu certo, valeu")
 finally:
     print("Tchau")
+
+chronosphere.sleep(2)
+print("Agora acabou!")
