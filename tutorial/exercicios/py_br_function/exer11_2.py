@@ -1,5 +1,7 @@
 from datetime import datetime
   
+
+  
 def year_validator(year):
     while True:
         try:
@@ -12,6 +14,7 @@ def year_validator(year):
         
         except:
             continue
+
 
 def year_formatter(year_validated):
     digit_string = str(year_validated)
@@ -30,6 +33,7 @@ def year_formatter(year_validated):
 
     return final_format
 
+
 def month_validator(month):
     while True:
         try:
@@ -43,6 +47,7 @@ def month_validator(month):
         except:
             continue
 
+
 def day_validator(day, month_validated, year_validated):
     months_31 = [1, 3, 5, 7, 8, 10, 12]
     months_30 = [4, 6, 9, 11]
@@ -52,20 +57,26 @@ def day_validator(day, month_validated, year_validated):
         try:
             if day.isnumeric():
                 day = int(day)
-                if month_validated in months_31 and 1 <= day <= 31:
-                    return day
-                elif month_validated in months_30 and 1 <= day <= 30:
-                    return day
-                elif (year_validated % 4) == 0 and 1 <= day <= 29:
-                    return day
+                if month_validated in months_31:
+                    if 1 <= day <= 31:
+                        return day
+                    else:
+                        print(date_helper.strftime('%B'), 'have 31 days.')
+
+                elif month_validated in months_30:
+                    if 1 <= day <= 30:
+                        return day
+                    else:
+                        print(date_helper.strftime('%B'), 'have 30 days.')
+
+                elif (year_validated % 4) == 0:
+                    if 1 <= day <= 29:
+                        return day
+                    else:
+                        print(year_validated, 'is a leap year.', date_helper.strftime('%B'), 'have 29 days.')
+                        
                 elif 1 <= day <= 28:
                     return day
-                elif month_validated in months_31:
-                    print(date_helper.strftime('%B'), 'have 31 days.')
-                elif month_validated in months_30:
-                    print(date_helper.strftime('%B'), 'have 30 days.')
-                elif (year_validated % 4) == 0:
-                    print(year_validated, 'is a leap year.', date_helper.strftime('%B'), 'have 29 days.')
                 else:
                     print(date_helper.strftime('%B'), 'have 28 days.')
             
@@ -73,6 +84,7 @@ def day_validator(day, month_validated, year_validated):
 
         except:
             continue  
+
 
 def date_writer():
     year = input('Year: ')
