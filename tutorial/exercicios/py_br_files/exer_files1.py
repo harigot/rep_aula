@@ -34,8 +34,8 @@ def ip_validator(ip):
     ip_nth = ip.split('.')
     if len(ip_nth)!= 4:
         return False
-    for i in ip_nth:
-        if not i.isnumeric():
+    for octet in ip_nth:
+        if not octet.isnumeric():
             return False
 
     first_octet = int(ip_nth[0])
@@ -46,9 +46,7 @@ def ip_validator(ip):
     if first_octet == 127 or first_octet == 0 or first_octet > 254:
         return False
 
-    if (second_octet > 255 or 
-        third_octet > 255 or
-        fourth_octet > 255):
+    if second_octet > 255 or third_octet > 255 or fourth_octet > 255:
         return False
         
     if 1 <= first_octet <= 126:  #Ip class A
@@ -86,7 +84,7 @@ def ip_database_handler():
         ip_bad = []
 
         for ip in ip_list:
-            if ip_validator(ip) == True:
+            if ip_validator(ip):
                 ip_good.append(ip)
             else:
                 ip_bad.append(ip)
