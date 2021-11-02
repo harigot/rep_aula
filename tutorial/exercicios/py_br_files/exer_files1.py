@@ -26,7 +26,8 @@ O arquivo de saída possui o seguinte formato:
 
 
 
-from os import close
+import os
+from pathlib import Path
 
 
 
@@ -67,7 +68,10 @@ def ip_validator(ip):
 
 
 def report_maker(ip_good, ip_bad):
-    with open('/home/harigot/Documents/repositorios/rep_aula/tutorial/exercicios/py_br_files/ip_report.txt', 'w+') as report:
+    mod_path = Path(__file__).parent
+    relative_path_1 = '/home/harigot/Documents/repositorios/rep_aula/tutorial/exercicios/py_br_files/files/ip_report.txt'
+    src_path_1 = (mod_path / relative_path_1).resolve()
+    with open(src_path_1, 'w+') as report:
         report.write('valid addresses:\n')
         for i in ip_good:
             report.write(i+'\n')
@@ -78,7 +82,10 @@ def report_maker(ip_good, ip_bad):
 
 
 def ip_database_handler():
-    with open('/home/harigot/Documents/repositorios/rep_aula/tutorial/exercicios/py_br_files/ip_database.txt', 'r') as ip_file:
+    mod_path = Path(__file__).parent
+    relative_path_1 = '/home/harigot/Documents/repositorios/rep_aula/tutorial/exercicios/py_br_files/files/ip_database.txt'
+    src_path_1 = (mod_path / relative_path_1).resolve()
+    with open(src_path_1, 'r') as ip_file:
         ip_list = ip_file.read().split('\n')
         ip_good = []
         ip_bad = []
