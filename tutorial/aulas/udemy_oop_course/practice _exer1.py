@@ -33,9 +33,14 @@ class BankAccount:
         self.balance += amount
 
 
+user1_account = BankAccount()
+user1_account.set_details('John', 100)
+user1_account.deposit(50)
+user1_account.withdraw(10)
+user1_account.display()
 
-user_account = BankAccount()
-user_account.set_details('John', 100)
-user_account.display()
-
-
+user2_account = BankAccount()
+user2_account.set_details('clark', 140)
+user2_account.deposit(40)
+user2_account.withdraw(30)
+user2_account.display()
