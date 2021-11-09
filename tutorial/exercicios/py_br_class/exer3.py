@@ -58,3 +58,4 @@ while total_roda_pe < local.calcularPerimetro():
     total_roda_pe += roda_pe
 
 quantidade_roda_pe = total_roda_pe / roda_pe
+print('Quantidade de rodape: ', quantidade_roda_pe)
