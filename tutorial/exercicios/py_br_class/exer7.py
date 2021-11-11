@@ -13,35 +13,35 @@ qualquer momento.
 class Tamagotchi:
     def __init__(self, name):
         self.name = name
-        self.hungry = 0
+        self.hunger = 0
         self.health = 100
         self.age = 0
 
     def feed(self):
-        if 0 < self.hungry:
-            self.hungry -= 5
+        if 0 < self.hunger:
+            self.hunger -= 5
             self.health += 5
             print('yum yum yum!')
-        elif self.hungry <= 0:
+        elif self.hunger <= 0:
             print('Im not hungry >.<')
 
     def play(self):
-            self.hungry += 5
+            self.hunger += 5
             print('so much fun!!')
     
     def get_old(self):
         self.age += 1
-        self.hungry += 10
+        self.hunger += 10
         self.health -= 10
 
     def humor(self):
-        if self.hungry > self.health:
+        if self.hunger > self.health:
             print('im not happy!, I am hungry')
-        elif self.hungry <= self.health:
+        elif self.hunger <= self.health:
             print('I am happy')
     
     def display(self):
-        print('Name: {}\nAge: {}\nHungry: {}\nHealth: {}'.format(self.name, self.age, self.hungry, self.health))
+        print(f'Name: {self.name}\nAge: {self.age}\nHunger: {self.hunger}\nHealth: {self.health}')
 
 
 srisumbhajee = Tamagotchi('srisumbhajee')
