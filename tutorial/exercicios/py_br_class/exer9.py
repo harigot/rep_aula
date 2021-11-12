@@ -50,3 +50,4 @@ rectangle1.center()
 rectangle1.change_size(20, 30)
 rectangle1.center()
 print(rectangle1)
+#test
