@@ -22,7 +22,7 @@ class point:
         self.y = y
 
     def __str__(self):
-        print(f'the center is at the point: ({self.x}, {self.y})')
+        return f'the center is at the point: ({self.x}, {self.y})'
 
 class rectangle:
     def __init__(self, width = 0, height = 0):
@@ -30,7 +30,7 @@ class rectangle:
         self.height = height
 
     def __str__(self):
-        print(f'({self.width}, {self.height})')
+        return f'({self.width}, {self.height})'
     
     def change_size(self, width, height):
         self.width = width
@@ -49,3 +49,4 @@ rectangle1.center()
 
 rectangle1.change_size(20, 30)
 rectangle1.center()
+print(rectangle1)
