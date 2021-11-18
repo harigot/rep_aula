@@ -16,7 +16,7 @@ i. Crie um menu para alterar os valores do retângulo e imprimir o centro deste 
 
 
 
-class point:
+class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -24,7 +24,7 @@ class point:
     def __str__(self):
         return f'the center is at the point: ({self.x}, {self.y})'
 
-class rectangle:
+class Rectangle:
     def __init__(self, width = 0, height = 0):
         self.width = width
         self.height = height
@@ -50,4 +50,3 @@ rectangle1.center()
 rectangle1.change_size(20, 30)
 rectangle1.center()
 print(rectangle1)
-#test
