@@ -37,13 +37,13 @@ class Rectangle:
         self.height = height
 
     def center(self):
-        rectangle_center = point(self.width/2, self.height/2)
+        rectangle_center = Point(self.width/2, self.height/2)
         rectangle_center.__str__()
 
 
-rectangle1 = rectangle(10, 20)
-rectangle2 = rectangle(30, 40)
-rectangle3 = rectangle(50, 60)
+rectangle1 = Rectangle(10, 20)
+rectangle2 = Rectangle(30, 40)
+rectangle3 = Rectangle(50, 60)
 
 rectangle1.center()
 
