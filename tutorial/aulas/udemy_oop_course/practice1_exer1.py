@@ -14,13 +14,9 @@ Create two instances of this class and call the methods on those instances.
 
 
 class BankAccount:
-    def __init__(self, name = 'default', balance = 0):
+    def __init__(self, name):
         self.name = name
-        self.balance = balance
-
-    def set_details(self, name, balance):
-        self.name = name
-        self.balance = balance
+        self.balance = 0
     
     def display(self):
         print(f'Name: {self.name}')
@@ -33,9 +29,7 @@ class BankAccount:
         self.balance += amount
 
 
-
-user_account = BankAccount()
-user_account.set_details('John', 100)
+user_account = BankAccount('jhon')
 user_account.display()
 
 
