@@ -34,46 +34,39 @@ f3.show()
 f3 = f1.multiply(5) 
 f3.show()
 The output that you should get is given below.
-
 2/3
-
 3/4
-
 6/12
-
 17/12
-
 17/3
-
 10/3
 '''
 
 
 
-def indeterminacy_preventer(dr):
-    while True:
-        try:
-            dr = int(dr)
-            if dr == 0:
-                print("The denominator cannot be 0.")
-                raise ValueError
-            break
-        except ValueError:
-            dr = input("Please enter a valid denominator: ")
-    return dr
-
-
 class Fraction:
     def __init__(self, nr, dr = 1):
-        dr = indeterminacy_preventer(dr)
+        dr = self.indeterminacy_preventer(dr)
         if dr < 0:
             dr = -dr
             nr = -nr
         self.numerator = nr
         self.denominator = dr
 
-    def show(self):
-        print(self.numerator, "/", self.denominator)
+    def indeterminacy_preventer(self, dr):
+        while True:
+            try:
+                dr = int(dr)
+                if dr == 0:
+                    print("The denominator cannot be 0.")
+                    raise ValueError
+                break
+            except ValueError:
+                dr = input("Please enter a valid denominator: ")
+        return dr
+
+    def __str__(self):
+        return f'{self.numerator} / {self.denominator}'
 
     def multiply(self, other):
         if isinstance(other, int):
@@ -83,20 +76,20 @@ class Fraction:
     
     def add(self, other):
         if isinstance(other, int):
-            return Fraction(self.numerator + other * self.denominator, self.denominator)
+            return Fraction(self.numerator + (other * self.denominator), self.denominator)
         else:
-            return Fraction(self.numerator * other.denominator + other.numerator * self.denominator, self.denominator * other.denominator)
+            return Fraction((self.numerator * other.denominator) + (other.numerator * self.denominator), self.denominator * other.denominator)
 
 
 f1 = Fraction(2,3)
-f1.show()
+print(f1)
 f2 = Fraction(3,4)
-f2.show()
+print(f2)
 f3 = f1.multiply(f2)
-f3.show()
+print(f3)
 f3 = f1.add(f2)
-f3.show()
+print(f3)
 f3 = f1.add(5) 
-f3.show()
+print(f3)
 f3 = f1.multiply(5) 
-f3.show()
+print(f3)
