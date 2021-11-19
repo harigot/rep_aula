@@ -31,5 +31,3 @@ class BankAccount:
 
 user_account = BankAccount('jhon')
 user_account.display()
-
-
