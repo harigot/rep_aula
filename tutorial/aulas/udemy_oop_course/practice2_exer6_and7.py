@@ -55,7 +55,6 @@ class Fraction:
 
     def indeterminacy_preventer(self, dr):
         try:
-            dr = int(dr)
             if dr == 0:
                 print('The denominator cannot be 0.')
                 raise ValueError
@@ -80,7 +79,7 @@ class Fraction:
             return Fraction((self.numerator * other.denominator) + (other.numerator * self.denominator), self.denominator * other.denominator)
 
 
-f1 = Fraction(2,0)
+f1 = Fraction(2,3)
 print(f1)
 f2 = Fraction(3,4)
 print(f2)
