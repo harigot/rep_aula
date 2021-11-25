@@ -15,6 +15,15 @@ class Person:
         self.weight = weight
         self.height = height
 
+    def __str__(self):
+        return f'{self.name} is {self.age} years old, weighs {self.weight} kg and is {self.height} tall.'
+
+    def __lt__(self, other):
+        return self.age <= other.age
+
+    def __le__(self, other):
+        return self.age <= other.age
+
     def get_old(self):
         self.age += 1
         if self.age < 21:
@@ -28,14 +37,13 @@ class Person:
 
     def grow(self, height):
         self.height += height
+        
 
-    def display(self):
-        print(f'{self.name} is {self.age} years old, weighs {self.weight} kg and is {self.height} tall.')
-
-
+'''
 pesron1 = Person('John', 19, 80, 1.80)
 pesron1.display()
 pesron1.get_old()
 pesron1.fatten(10)
 pesron1.lose_weight(5)
 pesron1.display()
+'''
