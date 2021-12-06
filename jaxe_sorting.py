@@ -1,4 +1,4 @@
-from tutorial.aulas.jaxe_classes.sorting.change_later import insertion_sort
+from tutorial.aulas.jaxe_classes.sorting.sorting_functions import insertion_sort
 from tutorial.exercicios.py_br_class.exer4 import Person
 
 
