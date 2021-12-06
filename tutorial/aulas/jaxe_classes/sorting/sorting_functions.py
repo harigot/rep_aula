@@ -3,7 +3,7 @@
 
 
 
-from heapq import heappop, heapify
+from heapq import heappop, heapify, heappush
 
 
 
@@ -27,14 +27,25 @@ def recursive_insertion_sort(array, i = 1):
         recursive_insertion_sort(array, i+1)
     return array
     
-
+'''
 def heap_sort(array):
     heapify(array)
     sorted = []
     while array:
         sorted.append(heappop(array))
     return sorted
+'''
+
+def heap_sort2(array):
+    heaped = []
+    for i in array:
+        heappush(heaped, i)
+
+    sorted = []
+    while heaped:
+        sorted.append(heappop(heaped))
+    return sorted
 
 
 mess = [6,2,7,3,5,1,2,6,7,8,5]
-print(heap_sort(mess))
+print(heap_sort2(mess))
